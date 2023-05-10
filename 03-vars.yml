@@ -66,3 +66,13 @@
     - sample: 
 
 # as we declared after the hosts which means in play level, all the roles will access it.
+
+- name: demo on register variables
+  hosts: all
+  tasks:
+    - name: run uptime shell command
+      ansible.builtin.shell: uptime
+
+
+# register is used for the stroing the variables
+# shell cmnd are used here which is " ansible.builtin.shell: uptime"
