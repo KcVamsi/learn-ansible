@@ -1,0 +1,16 @@
+- name: Demo on play level variables
+  hosts: all
+  vars: 
+    URL: play.example.com
+  tasks: 
+    - name: print URL
+      ansible.builtin.debug:
+      msg: URL - {{ URL }}
+
+# vars is the key we are using and -name: demo.... is something we can give or escape as our wish
+# in ansible variables will be accessed using {{}}
+#  ansible supports "" and '' however quotes are not mandotroy in all cases
+# but quotes are mandatory if value starts with a variable
+# example for that is - msg: {{}} ---> this doesnt require quoting
+# msg -URL - {{ URL }} ----> this doesnt require quoting
+
