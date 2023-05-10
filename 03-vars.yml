@@ -25,3 +25,22 @@
         msg: URL - {{ URL }}
       vars: 
         URL: task.example.com
+
+
+
+# loading vars from other files
+
+- name: load vars from other files
+  hosts: all
+  vars_files:
+    - exvars.yml
+  tasks: 
+    - name: print URL
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
+
+# we create an separate file with name exvars.yml
+# Here we are loading a vars file from other file which is exvars.yml file
+# vars_files doesnt support task level, it is only for the play level
+
+
