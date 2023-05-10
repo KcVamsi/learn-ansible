@@ -44,3 +44,25 @@
 # vars_files doesnt support task level, it is only for the play level
 
 
+
+
+# variables from roles
+
+# this code is for declaring at the task level
+
+- name: Demo on play level variables
+  hosts: all
+  roles:
+    - sample: 
+
+# this code is for declaring at the play level
+
+
+- name: Demo on play level variables
+  hosts: all
+  vars:
+    URL_PLAY: play.example.com
+  roles:
+    - sample: 
+
+# as we declared after the hosts which means in play level, all the roles will access it.

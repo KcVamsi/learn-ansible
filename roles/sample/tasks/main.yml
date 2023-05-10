@@ -1,3 +1,17 @@
 - name: print hello world
   ansible.builtin.debug:
     msg: hello from role sample
+
+# Here we declaring the variable at task level, so only that task can access it
+
+- name: print variable from role
+  ansible.builtin.debug:
+    msg: URL - {{ URL }}
+
+
+# we can declare at the play level, so that all tasks can access it
+
+- name: print variable from play
+  ansible.builtin.debug:
+    msg: URL_PLAY - {{ URL_PLAY }}
+
