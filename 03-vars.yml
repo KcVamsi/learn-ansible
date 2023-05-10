@@ -88,3 +88,8 @@
     - name: print output
       ansible.builtin.debug:
         msg: "{{ output }}"
+
+# if we dont want all the things and want only output then we have use "{{ output.stdout }}"
+# all this is used when we want to store an output of an task to variable and want to refer to that then we will use register
+
+
