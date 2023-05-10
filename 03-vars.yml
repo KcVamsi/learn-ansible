@@ -30,7 +30,7 @@
 
 # loading vars from other files
 
-- name: load vars from other files
+- name: load vars from a file
   hosts: all
   vars_files:
     - exvars.yml
