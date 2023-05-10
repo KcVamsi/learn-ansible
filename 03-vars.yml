@@ -50,10 +50,10 @@
 
 # this code is for declaring at the task level
 
-- name: Demo on play level variables
-  hosts: all
-  roles:
-    - sample: 
+# - name: Demo on play level variables
+#   hosts: all
+#   roles:
+#     - sample: 
 
 # this code is for declaring at the play level
 
