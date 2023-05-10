@@ -76,3 +76,15 @@
 
 # register is used for the stroing the variables
 # shell cmnd are used here which is " ansible.builtin.shell: uptime"
+# this will run the uptime and if we want to register this output to the variable then we use register word
+# we stroing it to output variable
+
+- name: demo on register variables
+  hosts: all
+  tasks:
+    - name: run uptime shell command
+      ansible.builtin.shell: uptime
+      register: output
+    - name: print output
+      ansible.builtin.debug:
+        msg: "{{ output }}"
